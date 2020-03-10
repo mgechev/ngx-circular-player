@@ -117,6 +117,10 @@
               "devServerTarget": "ngx-circular-player-demo:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },

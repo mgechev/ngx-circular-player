@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ngx-circular-player-demo",
+      "public": "dist/ngx-circular-player-demo",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

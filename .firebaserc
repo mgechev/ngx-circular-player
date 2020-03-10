@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngx-circular-player": {
+      "hosting": {
+        "ngx-circular-player-demo": [
+          "ngx-circular-player"
+        ]
+      }
+    }
+  }
+}

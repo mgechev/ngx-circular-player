@@ -1,6 +1,6 @@
 # NgxCircularPlayer
 
-A circular player for Angular.
+A circular player for Angular. Demo available at https://ngx-circular-player.firebaseapp.com/.
 
 ## Usage
 
