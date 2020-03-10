@@ -78,10 +78,6 @@ export class NgxCircularPlayerComponent implements AfterViewInit {
     audio.currentTime = seekTo;
   }
 
-  get drawn() {
-    return ``;
-  }
-
   get centerX() {
     return 50;
   }
