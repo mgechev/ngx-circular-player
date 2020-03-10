@@ -52,6 +52,10 @@ export class NgxCircularPlayerComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     const progress = this.progress.nativeElement;
+    // During SSR we don't need to do anything special here.
+    if (!progress || typeof progress.getTotalLength !== 'function') {
+      return;
+    }
     const totalLength = progress.getTotalLength();
     const audio = this.audio.nativeElement as HTMLAudioElement;
     progress.setAttribute('stroke-dasharray', totalLength);

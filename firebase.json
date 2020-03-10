@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "ngx-circular-player-demo",
-      "public": "dist/ngx-circular-player-demo",
+      "public": "dist/ngx-circular-player-demo/browser",
       "ignore": [
         "firebase.json",
         "**/.*",

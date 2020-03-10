@@ -9,7 +9,7 @@ import { NgxCircularPlayerModule } from 'ngx-circular-player';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgxCircularPlayerModule
   ],
   providers: [],
