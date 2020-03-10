@@ -1,24 +1,43 @@
 # NgxCircularPlayer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+A circular player for Angular. Demo available at https://ngx-circular-player.firebaseapp.com/.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project ngx-circular-player` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-circular-player`.
-> Note: Don't forget to add `--project ngx-circular-player` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm i ngx-circular-player --save
+```
 
-## Build
+After that in your `AppModule`:
 
-Run `ng build ngx-circular-player` to build the project. The build artifacts will be stored in the `dist/` directory.
+```ts
+import { NgxCircularPlayerModule } from 'ngx-circular-player';
 
-## Publishing
+@NgModule({
+  imports: [NgxCircularPlayerModule],
+  ...
+})
+export class AppModule {}
+```
 
-After building your library with `ng build ngx-circular-player`, go to the dist folder `cd dist/ngx-circular-player` and run `npm publish`.
+You can use the player in your template by:
 
-## Running unit tests
+```html
+<ngx-circular-player source="mysong.mp3"></ngx-circular-player>
+```
 
-Run `ng test ngx-circular-player` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuration
 
-## Further help
+You can specify the following inputs:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- `source` - Specifies the audio file.
+- `radius` - Specifies the radius of the player. Default value `120`.
+- `stroke` - Specifies the stroke width. Default value `20`.
+- `innerStroke` - Specifies the inner stroke width. Default value `2`.
+- `strokeColor` - Specifies the stroke color. Default value `#fff`.
+- `progressStrokeColor` - Specifies the color of the stroke indicating the progress. Default value `#858585`.
+- `innerStrokeColor` - Specifies the inner stroke color. Default value `#eee`.
+
+## License
+
+MIT
