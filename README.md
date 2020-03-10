@@ -1,27 +1,43 @@
 # NgxCircularPlayer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.8.
+A circular player for Angular.
 
-## Development server
+## Usage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm i ngx-circular-player --save
+```
 
-## Code scaffolding
+After that in your `AppModule`:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```ts
+import { NgxCircularPlayerModule } from 'ngx-circular-player';
 
-## Build
+@NgModule({
+  imports: [NgxCircularPlayerModule],
+  ...
+})
+export class AppModule {}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You can use the player in your template by:
 
-## Running unit tests
+```html
+<ngx-circular-player source="mysong.mp3"></ngx-circular-player>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuration
 
-## Running end-to-end tests
+You can specify the following inputs:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- `source` - Specifies the audio file.
+- `radius` - Specifies the radius of the player. Default value `120`.
+- `stroke` - Specifies the stroke width. Default value `20`.
+- `innerStroke` - Specifies the inner stroke width. Default value `2`.
+- `strokeColor` - Specifies the stroke color. Default value `#fff`.
+- `progressStrokeColor` - Specifies the color of the stroke indicating the progress. Default value `#858585`.
+- `innerStrokeColor` - Specifies the inner stroke color. Default value `#eee`.
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT

@@ -1,0 +1,40 @@
+<button class="play" [style.width]="playButtonRadius" [style.height]="playButtonRadius" (click)="toggle()">
+  <div [class.hidden-arrow]="playing"
+       [ngStyle]="arrowStyle"
+    class="arrow">
+  </div>
+  <span [class.hidden]="!playing" class="pause">
+    <span class="before" [ngStyle]="pauseLeftBarSize"></span>
+    <span class="after" [ngStyle]="pauseRightBarSize"></span>
+  </span>
+</button>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100"  [style.width]="radius">
+  <circle [attr.cx]="centerX" [attr.cy]="centerY" [attr.r]="circleRadius" [attr.stroke]="innerStrokeColor" fill="transparent" [attr.stroke-width]="innerStroke" />
+
+  <path
+    (click)="seek($event)"
+    pointer-events="stroke"
+    d="M 50 50
+       m -50, 0
+       a 50,50 0 1,0 100,0
+       a 50,50 0 1,0 -100,0"
+    stroke-miterlimit="10"
+    style="cursor: pointer"
+    fill="transparent"
+    [attr.stroke]="progressStrokeColor" [attr.stroke-width]="stroke"
+    />
+
+  <path
+    #progress
+    d="M 50 50
+       m -50, 0
+       a 50,50 0 1,0 100,0
+       a 50,50 0 1,0 -100,0"
+    [attr.stroke-miterlimit]="10"
+    [attr.stroke]="strokeColor" fill="transparent" [attr.stroke-width]="stroke"
+  />
+</svg>
+
+<audio preload="auto" #audio>
+  <source type="audio/mp3" [src]="source">
+</audio>

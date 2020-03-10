@@ -1,0 +1,84 @@
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  stroke: #fff;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+svg path {
+  cursor: pointer;
+}
+
+button {
+  position: relative;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  background: transparent !important;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+}
+
+.arrow {
+  transition: all 0.3s;
+
+  width: 0;
+  height: 0;
+
+  border-top-color: transparent;
+  border-top-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-left-color: #eee;
+
+  margin: auto;
+}
+
+.play,
+.pause {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.pause {
+  transition: opacity 0.3s;
+}
+
+/* Center */
+.play,
+.pause,
+.pause .before,
+.pause .after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pause .before,
+.pause .after {
+  content: "";
+  background-color: #eee;
+  display: inline-block;
+  opacity: 1;
+}
+
+.hidden-arrow {
+  border-left-width: 0 !important;
+}
+
+.hidden {
+  opacity: 0;
+}
